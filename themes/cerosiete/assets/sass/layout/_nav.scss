@@ -1,0 +1,35 @@
+/* ==|====================
+   Layout/Nav
+   ======================= */
+
+.menuCt {
+  width: 100%; height: auto; padding: 0; margin: 0; position: relative; 
+}
+.navList {
+  display: flex; justify-content: center; align-items: center; list-style-type: none; padding: 0; margin: 0;
+  &__item {
+    list-style-type: none; padding: 0; margin: 0 10px 0 0; width: 135px; height: auto;
+    & a {
+      text-align: center; letter-spacing: 0.2px; @include fluid-type(13px, 16px, 320px, 1200px); display: block; color: $col6; text-align: center; text-decoration: none; transition: all 300ms ease-in-out; opacity: 1;
+      &:hover {
+        color: $c1;
+      }
+      &.active {
+        font-family: $hkb; color: $col6;
+      }
+    }
+    &--logo {
+      width: 53px; height: auto; background: transparent; padding: 0; margin: 0 10px 0 0; text-align: center;
+      & a {
+        display: inline-block; margin: 0; padding: 0; text-decoration: none;
+        & img {
+          display: block; margin: 0; padding: 0; width: 100%;
+        }
+      }
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+

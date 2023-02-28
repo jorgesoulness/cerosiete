@@ -1,0 +1,92 @@
+/* ==|====================
+   Layout/Footer
+   ======================= */
+
+.footLay {
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 40px 0 40px 0; margin: auto 0 0 0; z-index: 1; background-color: $col1;
+  &__ct {
+    position: relative; z-index: 2;
+  }
+  &__title {
+    color: $white; margin: 0 0 10px; padding: 0; @include fluid-type(14px, 16px, 320px, 1200px); font-family: $inter; font-weight: 700; text-transform: uppercase;
+    @media all and (min-width: 768px) {
+      margin: 0 0 20px;
+    }
+  }
+  &__links {
+    width: 100%; height: auto; padding: 0 20px 0 0; margin: 0 0 20px; position: relative; box-sizing: border-box;
+    @media all and (min-width: 768px) {
+      margin: 0;
+    }
+  }
+  &__suscribe {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative; box-sizing: border-box;
+    & .descNews {
+      width: 100%; height: auto; padding: 0; margin: 0; box-sizing: border-box;
+      & p {
+        @include fluid-type(11px, 12px, 320px, 1200px); margin: 0; padding: 0; color: $white; font-family: $inter;
+      }
+    }
+    @media all and (min-width: 768px) {
+      margin: 20px 0 0 0;
+    }
+    @media all and (min-width: 992px) {
+      margin: 0;
+    }
+  }
+  &__menu {
+    list-style-type: none; width: 100%; height: auto; padding: 0; margin: 0; display: flex; flex-direction: column;
+  }
+  &__divider {
+    margin-top: 30px; margin-bottom: 30px; border-top: 1px solid $white; opacity: 0.6;
+  }
+  &__items {
+    list-style-type: none; padding: 0; margin: 0 0 6px; text-align: left; font-family: $inter; font-weight: 400; 
+    & a {
+      font-family: $inter; font-weight: 400; margin: 0; padding: 0; color: $white; text-decoration: none; @include fluid-type(12px, 14px, 320px, 1200px); opacity: 0.7;
+    }
+  }
+  &__soc {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative; box-sizing: border-box;
+    & ul {
+      list-style-type: none; display: flex; justify-content: center; align-items: center; margin: 0; padding: 0;
+      & li {
+        list-style-type: none; margin: 0 15px 0 0; padding: 0;
+        & a {
+          display: block; width: 35px; height: 35px; margin: 0; padding: 0; text-decoration: none; line-height: 33px; border: 1px solid rgba($white, 0.10); color: $white; font-size: 18px; text-align: center; outline: none; border-radius: 50%; transition: all 300ms ease-in-out; background-color: transparent;
+          &:hover {
+            background-color: $white; color: $col1;
+          }
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  // &:after {
+  //   content: ''; @include position(absolute, 0 null null 0); width: 100%; height: 100%; background: url('#{$imgR}bg_footer.png'); background-repeat: no-repeat; background-size: cover; background-position: center; z-index: 1;
+  // }
+}
+
+.footLay__frm {
+  display: flex; justify-content: space-between; margin-bottom: 20px;
+  & form {
+    flex-grow: 1; display: flex;
+    & input {
+      background: $white; border: none; padding: 10px 15px; flex-grow: 2; color: #5C7698; font-size: 14px; border-radius: 6px 0 0 6px;
+      @include placeholder {
+        color: $col4;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  & .btn-submit {
+    background: $col2; border: none; padding: 18px 20px; flex-grow: 1; color: $white; cursor: pointer; text-transform: uppercase; font-size: 12px; border-radius: 0 6px 6px 0;
+    &:focus {
+      outline: none;
+    }
+  }
+}

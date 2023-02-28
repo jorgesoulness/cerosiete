@@ -1,0 +1,12 @@
+1677534616a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:130:"description = "Footer"
+==
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">footer</div>
+  </div>
+</div>";s:5:"mtime";i:1677520078;s:6:"markup";s:100:"<div class="container">
+  <div class="row">
+    <div class="col-12">footer</div>
+  </div>
+</div>";s:4:"code";N;s:11:"description";s:6:"Footer";}}

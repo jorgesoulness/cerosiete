@@ -1,0 +1,68 @@
+description = "Layout Principal"
+==
+<!DOCTYPE html>
+<html lang="es-MX">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CeroSiete - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="CeroSiete">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="generator" content="CeroSiete">
+        <!-- <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}"> -->
+        <link href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor/animate.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor/hover-min.css'|theme }}" rel="stylesheet">
+        {% styles %}
+
+        <script type="text/javascript" src="{{ 'assets/vendor/jquery/dist/jquery.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/vendor/modernizr-2.8.3.min.js'|theme }}"></script>
+        <script>var siteURL = '<?php echo get_site_url(); ?>';</script>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <main id="layout-content">
+            {% page %}
+        </main>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="{{ 'assets/vendor/popper.js/dist/umd/popper.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/vendor/bootstrap/dist/js/bootstrap.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/vendor/jquery.easing.1.3.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/vendor/greensock/dist/TweenMax.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/plugins/wow.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/plugins/slick.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/scripts/genericScript.min.js'|theme }}"></script>
+        <script type="text/javascript" src="{{ 'assets/js/scripts/layoutScripts.min.js'|theme }}"></script>
+        <script>
+          var wow = new WOW(
+            {
+              boxClass: 'wow',      // default
+              animateClass: 'animated', // default
+              offset: 0,          // default
+              mobile: false,       // default
+              live: true        // default
+            })
+          setTimeout(function () {
+            wow.init();
+          }, 1000);
+        </script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>
